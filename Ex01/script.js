@@ -1,13 +1,22 @@
-// Seu JavaScript vai aqui
+// Gerar Número Aleatório
 var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+
+// Variaveis que estão no html para serem puxadas
 var palpites = document.querySelector('.palpites');
 var ultimoResultado = document.querySelector('.ultimoResultado');
 var baixoOuAlto = document.querySelector('.baixoOuAlto');
 var envioPalpite = document.querySelector('.envioPalpite');
 var campoPalpite = document.querySelector('.campoPalpite');
+
+// *******************************************************************
+
 var contagemPalpites = 1;
+
 var botaoReinicio;
+
 campoPalpite.focus();
+
+// Conferir
 function conferirPalpite() {
     var palpiteUsuario = Number(campoPalpite.value);
     if (contagemPalpites === 1) {
@@ -36,7 +45,11 @@ function conferirPalpite() {
     campoPalpite.value = '';
     campoPalpite.focus();
 }
+// Envio de Palpites
 envioPalpite.addEventListener('click', conferirPalpite);
+
+
+// Configuração do fim do Jogo
 function configFimDeJogo() {
     campoPalpite.disabled = true;
     envioPalpite.disabled = true;
@@ -45,6 +58,8 @@ function configFimDeJogo() {
     document.body.appendChild(botaoReinicio);
     botaoReinicio.addEventListener('click', reiniciarJogo);
 }
+
+// Reiniciar Jogo
 function reiniciarJogo() {
     contagemPalpites = 1;
     var reiniciarParas = document.querySelectorAll('.resultadoParas p');
