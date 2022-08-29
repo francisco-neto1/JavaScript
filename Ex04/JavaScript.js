@@ -1,20 +1,15 @@
-function horarioAtual() {
-    let horario = new Date().toLocaleTimeString();
-    document.getElementById("hora").innerHTML = horario;
-    setTimeout(horarioAtual, 1000);
+
+function conferirPalavra(palavra){
+	let reverse = palavra.split('').reverse().join('');
+	if (palavra = reverse) {
+		document.write('A palavra é um palíndromo')
+	} else{
+		document.write('A palavra não é um palíndromo')
+	}
 }
+let palavra = document.getElementById('campoPalavra');
+envioPalavra.addEventListener('click', conferirPalavra(palavra));
 
-const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
-const alert = (message, type) => {
-  const wrapper = document.createElement('div')
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    `   <div>${message}</div>`,
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-    '</div>'
-  ].join('')
-
-  alertPlaceholder.append(wrapper)
-}
-
+/* SPLIT divide a string em substring e coloca numa array e o retorna;
+REVERSE inverte os itens de uma array
+JOIN junta os elementos da array em uma stringe retorna essa string */

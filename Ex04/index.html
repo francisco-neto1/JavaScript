@@ -1,29 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Hora em tempo real</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css"
-    integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
-    
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Palíndromo</title>
 </head>
+<body>
+		<h1 id="titulo">Palíndromo</h1>
+		<p>Um <b>palíndromo</b> é uma palavra ou frase que pode ser lida no seu sentido normal, da esquerda para a direita, bem como no sentido contrário, da direita para a esquerda, sem que haja mudança nas palavras que a formam e no seu significado.</p>
+	<hr>
 
-<body class="" onload="horarioAtual()">
-    
-    <div class="container col-2 ">
-        
-        
-        <h1 id="hora"></h1>
-
-        
-        
-    </div>
-    <script type="text/javascript" src="JavaScript.js"></script>
+	<div class="form">
+	  <label for="campoPalavra">Digite sua palavra: </label>
+	  <input type="text" name="campoPalavra" id="campoPalavra" class="campoPalavra">
+	  <button id="envioPalavra">Verificar</button>
+	</div>
+	
+	<script type="text/javascript" src="script.js"></script>
 </body>
-
 </html>
