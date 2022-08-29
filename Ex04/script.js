@@ -1,5 +1,5 @@
-var el = document.getElementById("btVerificar");
-el.addEventListener("click", isPalindromo, false);
+var palavra = document.getElementById("btVerificar");
+palavra.addEventListener("click", isPalindromo, false);
 
 function isPalindromo() {
     let texto = document.getElementById('txtbox').value;
