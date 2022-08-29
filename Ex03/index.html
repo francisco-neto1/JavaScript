@@ -8,39 +8,42 @@
     
     <!-- CSS -->
     <style>
-        html {
-            font-family: sans-serif;
-        }
-
-        body {
-            width: 50%;
-            max-width: 800px;
-            min-width: 480px;
-            margin: 0 auto;
-        }
-
-        .ultimoResultado {
-            color: white;
-            padding: 3px;
-        }
-        .center{
-            text-align: center;
-        }
-    </style>
     
+    body{
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .container{
+        align-items: 50px;
+        justify-content: center;
+    }
+
+    #relogio{
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        width: 80%;
+        height: 90px;
+        font-size: 90px;
+        border: 0;
+        color: rgb(0, 7, 0);
+    }
+    </style>
 
     <!-- JavaScript -->
     <script type="text/javascript" src="script.js" defer></script> 
 </head>
 <body>
-    <h1 class="center">Relógio</h1>
-        <body>
-            <div class="container">
-                <input type="text" id="relogio" >  
-            </div>
-                
-        </body>
-        <script src="script.js"></script>
-    </html>
+    <div class="container">
+        <input type="text" id="relogio" >  
+    </div>
+    <script src="script.js"></script>
+</html>
 </body>
 </html>
