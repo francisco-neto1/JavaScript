@@ -10,6 +10,18 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
     <!-- Script Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,23 +30,23 @@
         //Sintaxe JSX (não é um script)
 
         var texto = "Venha estudar na Fatec !";
-            var result = "";
-            var count = 0;
-            function digitar() {
+        var result = "";
+        var count = 0;
+        function digitar() {
+            setTimeout(() => {
+                inserir(texto[count])
+            }, 200);
+        }
+        function inserir(letra) {
+            result += letra;
+            count++;
+            if (count < texto.length)
                 setTimeout(() => {
                     inserir(texto[count])
-                }, 200); 
-            }
-            function inserir(letra) {
-                result += letra;
-                count++;
-                if(count < texto.length)
-                    setTimeout(() => {
-                        inserir(texto[count])
-                    }, 200); 
-                const element = (<h1>{result}</h1>);
-                ReactDOM.render(element,document.getElementById('root'));
-            }
+                }, 200);
+            const element = (<h1>{result}</h1>);
+            ReactDOM.render(element, document.getElementById('root'));
+        }
 
         digitar();
     </script>
